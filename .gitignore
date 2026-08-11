@@ -1,0 +1,25 @@
+# 原始資料一律不進 repo（見 CLAUDE.md 資料層硬規則 1）
+data/raw/
+data/derived/*.parquet
+data/*.duckdb
+data/*.db
+
+# 人工標註結果保留（是資產，且體積小）
+!data/annotations/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# 產物
+figures/*.png
+!figures/.gitkeep
+
+# OS / 編輯器
+.DS_Store
+.vscode/
+.idea/
