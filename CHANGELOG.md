@@ -5,9 +5,23 @@
 ## [Unreleased]
 
 ### Added
-- （M1）`scripts/` 取得腳本與 `validate.py` 契約檢查
-- （M1）`analysis/` 基準線指標
-- （M1）`data/annotations/` 30 串人工標註集
+- `docs/OUTPUTS.md` — 各里程碑的產出形狀（M1～M5 表格規格）、判讀四關卡、
+  建議強度三級（應該改／值得查／原因未定）、「沒有可改的東西」也是合格產出（← `prepare.md` CS-009、CS-010）
+- `docs/METRICS.md` — 統計判斷九條原則，每條固定「原則 → 為什麼 → 在本專案落在哪」，
+  末尾附原則與四道關卡的對應表（← `prepare.md` CS-009、CS-010）
+- `prepare.md` CS-009、CS-010、CS-011
+
+### Changed
+- `docs/OUTPUTS.md` — 佔位資料改用機器可檢查的 `<!-- PLACEHOLDER-DATA -->` 標記，
+  不再靠「記得刪警語」；四張示意表標題加「（示意）」（← `prepare.md` CS-011）
+- `docs/ARCHITECTURE.md` — M1 明訂 `validate.py` 至少兩項檢查，新增「文件仍標佔位就報錯」那項
+- `prepare.md` CS-009 補流程誠實標註：`METRICS.md` 屬開工後的範圍擴大
+- `docs/ARCHITECTURE.md` — 目錄結構補兩份新文件；「里程碑與出口條件」節加註產出形狀不在本檔
+- `README.md` — 專案結構與「快速開始」的閱讀順序由四份補為六份
+
+> **M1 待辦（尚未開始，不屬於已完成的變更）**：`scripts/` 取得腳本與 `validate.py` 契約檢查、
+> `analysis/` 基準線指標、`data/annotations/` 30 串人工標註集。
+> 完成時移入上方 `Added`——**待辦與已完成不混在同一個標題下**，混了就看不出這版到底做了什麼。
 
 ## [0.1.0] - 2026-08-11
 

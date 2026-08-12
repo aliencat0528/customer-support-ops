@@ -67,6 +67,12 @@ cat docs/ASSUMPTIONS.md # 推導規則、參數、待查證清單
 
 # 4. 分層與里程碑出口條件
 cat docs/ARCHITECTURE.md
+
+# 5. 產出長什麼樣、算出來之後怎麼判斷、怎麼給建議
+cat docs/OUTPUTS.md
+
+# 6. 上面那些判讀規則憑什麼成立
+cat docs/METRICS.md
 ```
 
 M1 落地後，這一節會換成取得資料 → 建契約表 → 跑驗證的三行指令。
@@ -82,7 +88,9 @@ customer-support-ops/
 ├── data/contract.md      對話事件契約（跨層唯一介面）
 ├── docs/
 │   ├── ARCHITECTURE.md   四層職責、資料流、里程碑與出口條件
-│   └── ASSUMPTIONS.md    推導規則、參數、待查證、資料本身的限制
+│   ├── ASSUMPTIONS.md    推導規則、參數、待查證、資料本身的限制
+│   ├── OUTPUTS.md        產出形狀、判讀四關卡、建議強度三級
+│   └── METRICS.md        統計判斷原則（OUTPUTS 那些規則的理由）
 ├── prepare.md            決策記錄 CS-000～
 ├── CLAUDE.md             專案規則（技術棧、資料層硬規則）
 └── CHANGELOG.md

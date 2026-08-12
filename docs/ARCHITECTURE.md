@@ -62,6 +62,8 @@ customer-support-ops/
 ├── docs/
 │   ├── ARCHITECTURE.md      本檔
 │   ├── ASSUMPTIONS.md       推導規則、參數來源、已知失效情形
+│   ├── OUTPUTS.md           產出形狀、判讀四關卡、建議強度三級
+│   ├── METRICS.md           統計判斷原則（OUTPUTS 那些規則的理由）
 │   └── FINDINGS.md          分析主張（人寫）                 ← M2 起
 ├── figures/                 圖表產物，gitignore
 ├── CLAUDE.md / README.md / CHANGELOG.md / prepare.md
@@ -90,10 +92,16 @@ v0.1.0 只有 `data/contract.md`、`docs/`、四份根層文件。其餘目錄�
 
 出口條件分層寫，**各層可以分別死**——某一層不通過就砍那一層，不是砍整個專案。
 
+> 各里程碑**產出的具體形狀**（表格欄位、示意值）與**看到數字之後怎麼判斷**見 `OUTPUTS.md`；
+> 那些判讀規則的統計理由見 `METRICS.md`。本節只管交付與出口條件，不重複形狀。
+
 ### M1 · 數據整理
 
 - **交付**：L1 取得腳本、L2 契約表、`validate.py`、基準線（各品牌量／首回中位數／輪數分布）、
   `ASSUMPTIONS.md` 首版、人工標註集 30 串
+- **`validate.py` 至少兩項檢查**：①契約表的推導欄位缺 `rule_id` 或 `confidence` → 不合格
+  ②契約表已產出、但 `OUTPUTS.md` 仍含 `<!-- PLACEHOLDER-DATA -->` 標記 → 報錯中止
+  （← `prepare.md` CS-011；第②項防的是「跑過了但文件還說沒跑過」）
 - **出口**：
   ① 對話串重建後**抽 10 串人工核對無誤**
   ② 串接失敗率 < 5%（孤兒訊息、指向不存在的父節點）。超過即代表這份資料撐不住後面四個里程碑，
