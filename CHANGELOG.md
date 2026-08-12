@@ -9,9 +9,13 @@
   建議強度三級（應該改／值得查／原因未定）、「沒有可改的東西」也是合格產出（← `prepare.md` CS-009、CS-010）
 - `docs/METRICS.md` — 統計判斷九條原則，每條固定「原則 → 為什麼 → 在本專案落在哪」，
   末尾附原則與四道關卡的對應表（← `prepare.md` CS-009、CS-010）
-- `prepare.md` CS-009、CS-010
+- `prepare.md` CS-009、CS-010、CS-011
 
 ### Changed
+- `docs/OUTPUTS.md` — 佔位資料改用機器可檢查的 `<!-- PLACEHOLDER-DATA -->` 標記，
+  不再靠「記得刪警語」；四張示意表標題加「（示意）」（← `prepare.md` CS-011）
+- `docs/ARCHITECTURE.md` — M1 明訂 `validate.py` 至少兩項檢查，新增「文件仍標佔位就報錯」那項
+- `prepare.md` CS-009 補流程誠實標註：`METRICS.md` 屬開工後的範圍擴大
 - `docs/ARCHITECTURE.md` — 目錄結構補兩份新文件；「里程碑與出口條件」節加註產出形狀不在本檔
 - `README.md` — 專案結構與「快速開始」的閱讀順序由四份補為六份
 
